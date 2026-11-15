@@ -1,0 +1,18 @@
+# Curated prompts for `rice-gen --lucky`
+# Location: ~/.config/rice-gen/prompts.toml
+
+prompts = [
+  "minimalist cyberpunk street alley at dusk, neon reflections on wet asphalt",
+  "ancient torii gate in mist, glowing lanterns, cherry blossom trees, serene landscape",
+  "cozy anime bedroom overlooking rainy tokyo skyline at night, warm lamplight",
+  "dark fantasy towering gothic castle amidst swirling purple aurora, mysterious fog",
+  "retro 80s synthwave horizon with low poly mountains and wireframe sun",
+  "solarpunk botanical greenhouse floating among sky islands, lush foliage",
+  "samurai standing in a field of tall autumn grass at golden hour, wind blowing",
+  "deep space nebula vortex with vibrant stars and cosmic dust, high detail",
+  "quiet japanese shrine in a snowy mountain forest at twilight, glowing red lanterns",
+  "futuristic bullet train gliding through an infinite pastel canyon at sunrise",
+  "underwater bioluminescent coral reef city, soft ambient glow, surreal atmosphere",
+  "mountain monastery perched on a sheer cliff edge, fog rolling through the valley below"
+]
+

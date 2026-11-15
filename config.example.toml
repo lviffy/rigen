@@ -1,0 +1,68 @@
+# rice-gen configuration
+# Location: ~/.config/rice-gen/config.toml
+
+[api]
+# Provider: "openrouter" or "recraft"
+provider = "openrouter"
+
+# OpenRouter Model Slug:
+# Free tier: "recraft/recraft-v4.1-flash-v2:free"
+# Standard:  "recraft/recraft-v4.1-flash-v2"
+model = "recraft/recraft-v4.1-flash-v2:free"
+
+# Environment variable name holding your API key
+api_key_env = "OPENROUTER_API_KEY"
+
+# Optional direct fallback API key (prefer environment variable for security)
+# api_key = "sk-or-v1-..."
+
+# Default aspect ratio ("16:9", "16:10", "21:9", "4:3", "1:1")
+aspect_ratio = "16:9"
+
+[palette]
+# Palette mode:
+# - "auto" (default): Model thinks freely from prompt, extracts colors if mentioned, randomizes for --lucky.
+# - "rice": Always lock wallpapers to your active Hyprland desktop theme.
+mode = "auto"
+
+# Primary dotfile to scrape colors from (hyprsettings.toml, colors.conf, colors.json, etc.)
+# If left default or file is missing, automatically searches end-4 dots Material You
+# files (~/.local/state/quickshell/user/generated/colors.json) and Hyprland config.
+source_file = "~/.config/hypr/hyprsettings.toml"
+
+# Maximum accent colors passed to the model
+max_accents = 4
+
+# Fallback palette if no dotfiles or themes are found
+fallback_bg = "#1e1e2e"
+fallback_accents = ["#89b4fa", "#cba6f7", "#f38ba8", "#a6e3a1"]
+
+[wallpaper]
+# Backend: "auto", "quickshell", "swww", "hyprpaper", "mpvpaper", "feh", or "none"
+# "auto" detects QuickShell, swww, hyprpaper, mpvpaper, or feh automatically.
+backend = "auto"
+
+# Save directory for generated wallpapers (matches QuickShell / end-4 dots default)
+save_dir = "~/Pictures/Wallpapers"
+
+# Cache directory for temporary downloads and latest reference
+cache_dir = "~/.cache/rice-gen"
+
+# Automatically run matugen to re-theme system colors after wallpaper is set
+sync_matugen = false
+
+# Optional custom hook to execute after wallpaper is set (e.g. waybar reload)
+# post_hook = "pkill -SIGUSR2 waybar"
+
+[wallpaper.swww]
+# Extra arguments passed to `swww img`
+args = ["--transition-type", "wipe", "--transition-angle", "30", "--transition-fps", "120"]
+
+[wallpaper.mpvpaper]
+# Extra arguments passed to `mpvpaper`
+args = ["-f", "--auto-pause", "-o", "no-audio loop"]
+
+[lucky]
+# File containing curated prompts for `--lucky` rolls
+prompts_file = "~/.config/rice-gen/prompts.toml"
+

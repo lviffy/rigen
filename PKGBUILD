@@ -1,0 +1,54 @@
+# Maintainer: lviffy <contact.rohan.here@gmail.com>
+
+pkgname=rice-gen
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="AI-powered palette-synchronized wallpaper generator for Hyprland & Linux"
+arch=('x86_64' 'aarch64')
+url="https://github.com/lviffy/rice-gen"
+license=('MIT')
+depends=('gcc-libs' 'glibc')
+makedepends=('cargo')
+optdepends=(
+    'quickshell: Native desktop shader transition animations (end-4 dots / illogical-impulse)'
+    'swww: Wayland wallpaper daemon with animated transitions'
+    'hyprpaper: Official Hyprland wallpaper daemon'
+    'mpvpaper: Animated and video wallpaper support'
+    'kitty: Inline terminal preview with Kitty graphics protocol'
+    'libnotify: Desktop notifications via notify-send'
+    'matugen: Dynamic Material You palette regeneration'
+)
+provides=('rice-gen')
+conflicts=('rice-gen')
+options=('!lto')
+
+build() {
+    cd "$startdir"
+    export CARGO_TARGET_DIR=target
+    export RUSTUP_TOOLCHAIN=stable
+    cargo build --release --locked
+}
+
+check() {
+    cd "$startdir"
+    export CARGO_TARGET_DIR=target
+    export RUSTUP_TOOLCHAIN=stable
+    cargo test --release --locked
+}
+
+package() {
+    cd "$startdir"
+    install -Dm755 "target/release/rice-gen" "$pkgdir/usr/bin/rice-gen"
+    install -Dm644 "README.md" "$pkgdir/usr/share/doc/rice-gen/README.md"
+    install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/rice-gen/LICENSE"
+
+    # Default configuration templates (auto-initialized to ~/.config/rice-gen on first user run)
+    install -Dm644 "config.example.toml" "$pkgdir/usr/share/rice-gen/config.toml"
+    install -Dm644 "prompts.example.toml" "$pkgdir/usr/share/rice-gen/prompts.toml"
+
+    # Hyprland integration snippets (both standard Hyprlang and Lua)
+    install -Dm644 "hyprland/keybinds.conf" "$pkgdir/usr/share/rice-gen/hyprland/keybinds.conf"
+    install -Dm644 "hyprland/rules.conf" "$pkgdir/usr/share/rice-gen/hyprland/rules.conf"
+    install -Dm644 "hyprland/keybinds.lua" "$pkgdir/usr/share/rice-gen/hyprland/keybinds.lua"
+    install -Dm644 "hyprland/rules.lua" "$pkgdir/usr/share/rice-gen/hyprland/rules.lua"
+}

@@ -1,0 +1,51 @@
+[api]
+# Provider: "openrouter" or "recraft"
+provider = "openrouter"
+
+# Environment variable name holding your API key
+# For openrouter: export OPENROUTER_API_KEY="sk-or-v1-..."
+# For recraft:    export RECRAFT_API_TOKEN="..."
+api_key_env = "OPENROUTER_API_KEY"
+
+# Model:
+# OpenRouter: "recraft-ai/recraft-v4.1-flash-v2:free" (free tier) or "recraft-ai/recraft-v4.1-flash-v2"
+# Recraft:    "recraftv4_1_flash"
+model = "recraft/recraft-v4.1-flash-v2:free"
+
+# Default aspect ratio ("16:9", "16:10", "21:9", "4:3", "1:1")
+aspect_ratio = "16:9"
+
+[palette]
+# Primary dotfile to scrape colors from
+source_file = "~/.config/hypr/hyprsettings.toml"
+
+# Maximum accent colors to pass to Recraft
+max_accents = 4
+
+# Fallback palette if source file is missing
+fallback_bg = "#1e1e2e"
+fallback_accents = ["#89b4fa", "#cba6f7", "#f38ba8", "#a6e3a1"]
+
+[wallpaper]
+# Backend: "auto", "mpvpaper", "swww", "hyprpaper", "feh", or "none"
+backend = "auto"
+
+# Cache and permanent save paths
+cache_dir = "~/.cache/rice-gen"
+save_dir = "~/Pictures/rice-gen"
+
+# Automatically run matugen to sync desktop colors
+sync_matugen = false
+
+# Post execution command (optional, e.g. quickshell or waybar reload)
+# post_hook = "qs -c lviffy-shell ipc call wallpaperService update"
+
+[wallpaper.mpvpaper]
+args = ["-f", "--auto-pause", "-o", "no-audio loop"]
+
+[wallpaper.swww]
+args = ["--transition-type", "wipe", "--transition-angle", "30", "--transition-fps", "120"]
+
+[lucky]
+prompts_file = "~/.config/rice-gen/prompts.toml"
+

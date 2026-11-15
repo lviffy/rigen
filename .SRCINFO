@@ -1,0 +1,23 @@
+pkgbase = rice-gen
+	pkgdesc = AI-powered palette-synchronized wallpaper generator for Hyprland & Linux
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/lviffy/rice-gen
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = cargo
+	depends = gcc-libs
+	depends = glibc
+	optdepends = quickshell: Native desktop shader transition animations (end-4 dots / illogical-impulse)
+	optdepends = swww: Wayland wallpaper daemon with animated transitions
+	optdepends = hyprpaper: Official Hyprland wallpaper daemon
+	optdepends = mpvpaper: Animated and video wallpaper support
+	optdepends = kitty: Inline terminal preview with Kitty graphics protocol
+	optdepends = libnotify: Desktop notifications via notify-send
+	optdepends = matugen: Dynamic Material You palette regeneration
+	provides = rice-gen
+	conflicts = rice-gen
+	options = !lto
+
+pkgname = rice-gen

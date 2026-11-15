@@ -1,0 +1,7 @@
+/target
+/pkg
+/src_pkg
+*.pkg.tar.zst
+*.pkg.tar.xz
+*.log
+rice-gen

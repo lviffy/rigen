@@ -1,0 +1,52 @@
+prompts = [
+  # --- Original Classics ---
+  "cyberpunk noodle bar in neon rain, cinematic wide shot, detailed reflections",
+  "minimalist brutalist monolith rising out of a foggy serene lake at dawn",
+  "solarpunk greenhouse overgrown with lush glowing bioluminescent plants, isometric",
+  "retro 90s anime spaceship bridge with CRT monitors and starfield panorama",
+  "quiet japanese shrine in a snowy mountain forest at twilight, glowing lanterns",
+  "futuristic bullet train gliding through an infinite pastel canyon at golden hour",
+  "cozy lo-fi attic study room, cat on desk, warm lamplight, rain on the window",
+  "dark fantasy ancient ruins with glowing runic obelisk, mysterious mist",
+  "abandoned space station observation deck, deep space nebula visible through glass",
+  "samurai standing in a field of tall grass at sunset, wind blowing, cinematic",
+  "underwater bioluminescent coral reef city, soft ambient glow",
+  "mountain monastery perched on a cliff edge, fog rolling through the valley below",
+
+  # --- Cyberpunk, Hacker & Sci-Fi (Tokyo Night / Mocha Vibes) ---
+  "underground hacker server room overgrown with glowing moss and hanging cables, volumetric light",
+  "late night Japanese convenience store in soft rain, glowing vending machines, lo-fi anime style",
+  "retro-futuristic cassette futurism control deck, amber CRT screens, tactile mechanical switches",
+  "orbital space elevator tether rising through moody storm clouds at dusk, cinematic wide angle",
+  "mecha hangar bay during maintenance, sparks flying, giant robot silhouette in moody fog",
+  "neon-lit brutalist subway station at 3am, empty platform, wet floor reflections, 35mm film grain",
+  "cybernetic alchemist laboratory, glowing potions in glass tubes, dark atmospheric lighting",
+
+  # --- Minimalist, 3D & Abstract (Clean Desktop / No Icon Clutter) ---
+  "abstract frosted glass geometric shapes floating in soft volumetric light, smooth color gradients",
+  "minimalist flat vector mountain range at dusk, layered paper cut-out aesthetic, clean lines",
+  "bauhaus inspired geometric archways and spheres, soft matte 3D clay render, long shadows",
+  "topographic contour map lines glowing softly on a matte dark surface, minimalist design",
+  "iridescent liquid metal ripples in slow motion, macro 3D render, smooth studio lighting",
+  "single bonsai tree on a floating concrete slab in an infinite misty void, minimalist zen",
+
+  # --- Isometric & Micro-Worlds ---
+  "isometric 3D cutaway of a cozy subterranean coder bunker, triple monitor setup, warm lighting",
+  "isometric floating island with a tiny lighthouse and cascading waterfall, stylized 3D render",
+  "isometric retro arcade cabinet corner, glowing neon signs and patterned carpet, low-poly style",
+  "isometric automated alchemy workshop with brass pipes and glowing crystals, diorama view",
+
+  # --- Atmospheric Nature & Nordic (Everforest / Gruvbox / Rose Pine Vibes) ---
+  "misty Pacific Northwest pine forest at dawn, sunbeams piercing through tall trees, serene mood",
+  "abandoned brutalist concrete radio telescope in an overgrown autumn valley, cinematic fog",
+  "black sand beach in Iceland with basalt sea stacks, moody overcast sky, minimalist photography",
+  "endless desert sand dunes under a giant ringed planet at twilight, smooth gradient sky",
+  "traditional wooden boat floating on a mirror-like alpine lake, snow-capped peaks in mist",
+  "ancient overgrown stone torii gate submerged in a calm forest pond, floating autumn leaves",
+
+  # --- Anime & Stylized Illustration ---
+  "makoto shinkai style railway crossing at sunset, dramatic cumulus clouds, power lines silhouette",
+  "cel-shaded rooftop view of a sprawling metropolis at twilight, wind turbines spinning in distance",
+  "studio ghibli inspired hillside bakery overlooking a sparkling ocean bay, painted clouds",
+  "lone astronaut sitting on a grassy hill looking up at a shattered moon, lo-fi illustration",
+]
